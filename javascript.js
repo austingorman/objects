@@ -34,6 +34,31 @@ const congressionalCandidate = {
     voteUrl:'http://www.vote.biz',
 }
 
+let article = document.createElement('article')
+article.id = congressionalCandidate.district
+let textNode1 = document.createTextNode(`Taxes: ${congressionalCandidate.platform[0].taxes}`)
+let textNode2 = document.createTextNode(`Jobs: ${congressionalCandidate.platform[0].jobs}`)
+let textNode3 = document.createTextNode(`Infrastructure: ${congressionalCandidate.platform[0].infrastructure}`)
+let textNode4 = document.createTextNode(`Healthcare: ${congressionalCandidate.platform[0].healthCare}`)
+let textNode5 = document.createTextNode(`Crime: ${congressionalCandidate.platform[0].crime}`)
+let platformList = document.createElement('ul')
+let list1 = document.createElement('li')
+let list2 = document.createElement('li')
+let list3 = document.createElement('li')
+let list4 = document.createElement('li')
+let list5 = document.createElement('li')
+list1.appendChild(textNode1)
+list2.appendChild(textNode2)
+list3.appendChild(textNode3)
+list4.appendChild(textNode4)
+list5.appendChild(textNode5)
+platformList.appendChild(list1)
+platformList.appendChild(list2)
+platformList.appendChild(list3)
+platformList.appendChild(list4)
+platformList.appendChild(list5)
+article.appendChild(platformList)
+document.body.appendChild(article)
 
 function district(number) {
     congressionalCandidate.district = number;
@@ -91,29 +116,3 @@ function url(newUrl) {
     congressionalCandidate.url = newUrl
 }
 url('http://www.alright.com')
-
-let article = document.createElement('article')
-article.id = congressionalCandidate.district
-let textNode1 = document.createTextNode(`Taxes: ${congressionalCandidate.platform[0].taxes}`)
-let textNode2 = document.createTextNode(`Jobs: ${congressionalCandidate.platform[0].jobs}`)
-let textNode3 = document.createTextNode(`Infrastructure: ${congressionalCandidate.platform[0].infrastructure}`)
-let textNode4 = document.createTextNode(`Healthcare: ${congressionalCandidate.platform[0].healthCare}`)
-let textNode5 = document.createTextNode(`Crime: ${congressionalCandidate.platform[0].crime}`)
-let platformList = document.createElement('ul')
-let list1 = document.createElement('li')
-let list2 = document.createElement('li')
-let list3 = document.createElement('li')
-let list4 = document.createElement('li')
-let list5 = document.createElement('li')
-list1.appendChild(textNode1)
-list2.appendChild(textNode2)
-list3.appendChild(textNode3)
-list4.appendChild(textNode4)
-list5.appendChild(textNode5)
-platformList.appendChild(list1)
-platformList.appendChild(list2)
-platformList.appendChild(list3)
-platformList.appendChild(list4)
-platformList.appendChild(list5)
-article.appendChild(platformList)
-document.body.appendChild(article)
